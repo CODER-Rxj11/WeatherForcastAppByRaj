@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <form action="/" id="redirect">
+        <div class="container2">   
+            <img id="sorryimg" src="../images/lookingfor.png">
+            <h1>YOU HAVE BEEN ENTERED A WRONG CITY !!!</h1>
+            <h1>YOU HAVE BEEN REDIRECTED TOWARD THE MAIN PAGE IN <span id="counter">3</span> SECONDS.</h1>
+            <h1>IF NOT REDIRECTED , PLS REFRESH THE PAGE!!!</h1>
+        </div>
+    </form>
+
+    <script>
+        var seconds = 3;
+        setInterval(function() {
+            document.getElementById("counter").innerHTML = --seconds;
+        }, 1000);
+
+        setTimeout(()=>{
+            window.location.href = "http://localhost:3000/"
+        }, 3000);
+    </script>
+</body>
+</html>

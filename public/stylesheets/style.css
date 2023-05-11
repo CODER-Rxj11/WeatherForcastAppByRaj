@@ -1,0 +1,380 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ogg";
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow : hidden;
+}
+
+* h1, h4{
+  color: #fff;
+  font-family: "OggExtraBold";
+}
+
+/* FOR INDEX.EJS */
+
+form label{
+  color: #fff;
+}
+
+.container1{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("../images/frontnew.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#new1{
+  margin-right: 0.5em;
+  font-size: 50px;
+  color: rgb(35 57 96);
+}
+
+#new2{
+  margin-left: 0.5em;
+  font-size: 50px;
+  color: rgb(210,146,48);
+}
+
+.container1 img{
+  margin-left: 36em;
+  margin-top: 2em;
+  width: 25%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.container1 h1{
+  position: relative;
+  top: 1em;
+  left: 6em;
+  color: rgb(139, 125, 98);
+}
+
+.container1 form{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 3px solid rgb(170 187 204);
+  box-shadow: 10px 5px 5px ;
+  border-radius: 40px;
+  padding: 3em 1em;
+}
+
+.container1 input:nth-child(2){
+  border: none;
+  background-color: rgb(66, 106, 145);
+}
+
+/* RESPONSIVE INDEX.EJS */
+
+@media(max-width: 800px){
+  .container1{
+    width: 100%;
+    height: 100%;
+  }
+
+  .container1 img{
+    width: 40%;
+    margin-left: 10em;
+    margin-top: 6em;
+  }
+
+  .container1 h1{
+    left: 0em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #new1{
+    margin-bottom: 0.2em;
+  }
+
+  #new2{
+    margin-top: 0.5em;
+  }
+
+  .container1 form{
+    padding: 4em 2em;
+    top: 60%;
+  }
+} 
+
+/* FOR WEATHER.EJS */
+
+.main-container{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.images img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-container .top-container{
+  position: fixed;
+  top: 2em;
+  left: 4em;
+}
+
+.top-container h1{
+  font-size: 14px;
+}
+
+.main-container .left-container{
+  position: relative;
+  width: 70%;
+  height: 100%;
+  padding: 0em 1em;
+}
+
+.left-container .info{
+  width: 100%;
+  padding : 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 3em;
+  left: 4em;
+}
+
+.info h1:nth-child(1),h1:nth-child(2),h1:nth-child(3){
+  margin-left: 1em;
+}
+
+.info h1:nth-child(2){
+  margin-bottom: 0.5em;
+}
+
+.info .tempreature h1{
+  font-size: 3em;
+}
+
+.place{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.place i{
+  font-size: 1em;
+  margin-right: 0.5em;
+  font-family: "Ogg";
+}
+
+.temp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.temp>h1{
+  font-size: 3em;
+}
+
+.temp h1{
+  margin-right: 2em;
+}
+
+.temp i{
+  /* margin-bottom: 1em; */
+  font-size: 2em;
+}
+
+.main-container .right-container{
+  position: relative;
+  width: 30%;
+  height: 100%;
+  backdrop-filter: blur(30px);
+  padding: 1em 2em;
+}
+
+.right-container input{
+  /* padding: 1em; */
+  margin-top: 1em;
+  margin-left: 1em;
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgb(55, 165, 179);
+  font-size: 16px;
+}
+
+input:nth-child(1):hover{
+  border: 2px solid rgb(55, 165, 179);
+  cursor: pointer;
+  background: none;
+  font-weight: 900;
+  color: #000;
+}
+
+.right-container .options{
+  margin-top: 2em;
+  margin-left: 1em;
+  color: #fff;
+}
+
+/* .right-container .search{
+  text-decoration: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 5%;
+  top: 0%;
+  padding: 0.5em;
+  border: 1px solid rgb(55, 165, 179);
+  color: rgb(16, 13, 13);
+  font-size: 15px;
+} */
+
+.right-container hr{
+  width: 80%;
+  margin-top: 1em;
+  margin-left: 1em;
+  border: 1px solid #fff;
+  color : #fff;
+
+}
+
+.options h4{
+  margin-bottom: 1em;
+  margin-top: 0.2em;
+  font-family: "Ogg";
+  text-decoration: none;
+  color: #fff;
+}
+
+.right-container #head{
+  margin-top: 1em;
+  font-size: 25px;
+}
+
+.dets .details{
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  /* font-family: "Monserrate"; */
+}
+
+.details h1,h2{
+  font-size: 18px;
+  font-family: "Ogg";
+  color: #fff;
+}
+
+/* RESPONSIVE WEATHER.EJS*/
+
+@media(max-width: 500px){
+  .main-container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-container .left-container{
+    position: relative;
+    width: 45%;
+    height: 100%;
+  }
+
+  .main-container .right-container{
+    position: relative;
+    width: 55%;
+    height: 100%;
+    backdrop-filter: blur(30px);
+    padding: 1em 2em;
+  }
+  
+  .left-container .info{
+    width: 100%;
+    padding : 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1em;
+    left: 0em;
+  }
+  
+  .info h1:nth-child(1),h1:nth-child(2),h1:nth-child(3){
+    margin-left: 0em;
+    margin-bottom: 1em;
+  }
+
+  .info h1:nth-child(1){
+    margin-bottom: 1em;
+    margin-right: 1em;
+  }
+
+  .info h1:nth-child(2){
+    margin-bottom: 1em;
+    margin-right: 1em;
+    /* display: none; */
+  }
+
+  .place{
+    margin-bottom: 2em;
+    display: none;
+  }
+
+  .right-container #head{
+    margin-top: 1em;
+    font-size: 20px;
+  }
+} 
+
+/* FOR SORRY.EJS */
+
+.container2{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/front.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container2 h1{
+  margin-top: 1em;
+  text-align: center;
+}
+
+#sorryimg{
+  display: flex;
+  padding-top: 5em ;
+  margin-left: 35em;
+  width: 30%;
+  text-align: center;
+}
+
+@media(max-width: 500px){
+  .container2{
+    padding: 4em;
+  }
+} 
